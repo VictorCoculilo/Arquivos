@@ -1,6 +1,3 @@
-from ctypes import sizeof
-from io import SEEK_END
-from shutil import which
 import struct
 import sys
 
@@ -14,6 +11,7 @@ with open("cep_ordenado.dat","rb") as f:
     inicio = 0
     fim = bloco-1
     c = 0
+
     while(inicio<=fim):
         meio = (inicio + fim) // 2
         f.seek(meio * registroCEP.size)
